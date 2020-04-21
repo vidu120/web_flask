@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Finding a prime number!!
+    </title>
+</head>
+
+<body>
+    {% if fine %}
+    <h1>A way to find prime numbers!!!</h1>
+    {% else %}
+    <h1>The prime numbers uptil {{uptil}} are--</h1>
+    <ul>
+        {% for i in range(2 ,uptil) %}
+        {% if uptil % i == 0 %}
+        {% break %}
+        {% endif %}
+        {% else %}
+        <li>uptil</li>
+        {% endelse %}
+        {% endfor %}
+        <li>It is prime</li>
+    </ul>
+    {%  endif %}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        MYNOTES
+    </title>
+</head>
+
+<body>
+    <h1 style="text-align:center;color:aqua;">MY NOTES</h1>
+    <ul>
+        {% for note in notes %}
+        <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('index') }}" method="POST">
+        <input name = "note" type="text" placeholder="Your note here">
+        <button>Add this note..</button>
+    </form>
+</body>
+
+</html>
